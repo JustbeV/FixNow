@@ -7,35 +7,77 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="animated-bg"></div>
 
 <header>
     <h1>FixNow</h1>
     <p>One Click PC Repair</p>
+    <hr>
+    <button id="darkModeToggle" class="btn toggle-btn">🌙 Dark Mode</button>
 </header>
 
 <main>
-    <section class="intro fade-in">
-        <h2>What is FixNow?</h2>
-        <p>FixNow lets anyone repair their Windows system files with a single click, without opening the command prompt.</p>
+    <!-- What is FixNow Section with Anime Girl -->
+    <section class="card what-is-fixnow fade-in">
+        <div class="text">
+            <h2>What is FixNow?</h2>
+            <p>FixNow allows anyone to repair Windows system files with a single click, without opening the command prompt. Safe, fast, and easy!</p>
+        </div>
+        <div class="anime-girl">
+            <img src="images/anya-thinking.gif" alt="Anya thinking" />
+        </div>
     </section>
 
-    <section class="screenshots fade-in">
-        <h2>Screenshot</h2>
-        <img src="images/screenshot.png" alt="FixNow GUI screenshot">
+<section class="card screenshots-card">
+    <h2>Screenshot of User Interface</h2>
+    <div style="display: flex; align-items: center; gap: 20px;">
+        <img src="images/screenshot.png" alt="FixNow main window" style="width: 60%; border-radius: 12px; border: 2px solid #1a73e8;">
+        <div>
+            <h1>excluded </h1>
+            <img src="images/wave.gif" alt="waving" style="width: 90%; border-radius: 12px;">
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- How to Run & Download Section -->
+    <section class="card run-download fade-in">
+        <div class="text">
+            <h2>How to Run & Download</h2>
+            <ol>
+                <li>Double-click the EXE file.</li>
+                <li>Allow the UAC prompt.</li>
+                <li>Click "Run SFC Scan".</li>
+            </ol>
+            <a href="https://github.com/JustbeV/FixNow/releases/latest" class="btn">Download EXE</a>
+        </div>
+        <div class="anime-girl">
+            <img src="images/anya-running.gif" alt="Anya running" />
+        </div>
     </section>
 
-    <section class="download fade-in">
-        <h2>Download</h2>
-        <a href="https://github.com/JustbeV/FixNow/releases/latest" class="btn">Download EXE</a>
+    <!-- About SFC Scan -->
+    <section class="card optional-card fade-in">
+        <h2>About SFC Scan</h2>
+        <p>The <code>sfc /scannow</code> command scans and repairs Windows system files. Personal files remain safe. Use it to fix system instability or missing files.</p>
     </section>
 
-    <section class="instructions fade-in">
-        <h2>How to Run</h2>
+    <!-- Safety & Precautions -->
+    <section class="card optional-card fade-in">
+        <h2>Safety & Precautions</h2>
         <ul>
-            <li>Double-click the EXE file.</li>
-            <li>Allow the UAC prompt.</li>
-            <li>Click "Run SFC Scan".</li>
+            <li>Save your work before running a scan.</li>
+            <li>Do not interrupt the scan once it starts.</li>
+            <li>SFC only affects system files; personal files remain untouched.</li>
+        </ul>
+    </section>
+
+    <!-- References -->
+    <section class="card optional-card fade-in">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/sfc-scannow" target="_blank">Microsoft: SFC /Scannow</a></li>
+            <li><a href="https://www.tenforums.com/tutorials/1697-sfc-scannow-command-run-windows-10-a.html" target="_blank">TenForums: How to run SFC Scan</a></li>
         </ul>
     </section>
 </main>

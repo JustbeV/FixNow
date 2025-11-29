@@ -1,123 +1,186 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-    background: #111;
-}
-
-/* Animated background */
-.animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, #0078d7, #00bfff, #1e1e1e);
-    background-size: 400% 400%;
-    animation: moveBG 15s ease infinite;
-    z-index: -1;
-}
-
-@keyframes moveBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    background:#ffffff;
+    color:#333;
+    line-height:1.6;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Header */
 header {
-    text-align: center;
-    padding: 80px 20px;
+    text-align:center;
+    padding:50px 20px;
+    position: relative;
 }
-
 header h1 {
-    font-size: 4em;
-    color: #00bfff;
-    animation: glow 2s ease-in-out infinite alternate;
+    font-size:3em;
+    color:#1a73e8;
+    margin-bottom:5px;
+    font-family: 'Georgia', serif;
 }
-
 header p {
-    font-size: 1.5em;
-    margin-top: 10px;
-    color: #f0f0f0;
+    font-size:1.2em;
+    color:#555;
+}
+header hr {
+    margin-top:15px;
+    border:1px solid #1a73e8;
+    width:60px;
 }
 
-/* Glow effect */
-@keyframes glow {
-    0% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
-    100% { text-shadow: 0 0 20px #00bfff, 0 0 40px #0078d7; }
-}
-
-/* Sections */
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-h2 {
-    color: #00bfff;
-    margin-bottom: 15px;
-}
-
-p, li {
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-/* Fade-in animation */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Button */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #00bfff;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
+/* Dark mode toggle button */
+.toggle-btn {
+    position: absolute;
+    top:20px;
+    right:20px;
+    font-size:1em;
+    background:#ffb6c1;
+    border:none;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 0 10px #00bfff;
+}
+.toggle-btn:hover {
+    background:#ff90b0;
 }
 
+/* Main sections */
+main {
+    max-width:900px;
+    margin:30px auto;
+    padding:0 20px;
+}
+.card {
+    background:#fafafa;
+    border:1px solid #ddd;
+    border-left:5px solid #1a73e8;
+    padding:25px 20px;
+    margin-bottom:25px;
+    border-radius:12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow:0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+    color:#1a73e8;
+    margin-bottom:12px;
+    font-family: 'Georgia', serif;
+}
+
+/* Lists */
+ul, ol {
+    padding-left:20px;
+}
+
+/* Download button */
+.download-card, .run-download .btn {
+    text-align:center;
+    display:inline-block;
+    margin-top:15px;
+}
+.btn {
+    display:inline-block;
+    padding:12px 28px;
+    background:#ffb6c1; /* pastel pink button for cute vibe */
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:8px;
+    transition: all 0.3s ease;
+}
 .btn:hover {
-    background-color: #0078d7;
+    background:#ff90b0;
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00bfff;
 }
 
-/* Screenshot */
-.screenshots img {
-    max-width: 100%;
-    border-radius: 10px;
-    border: 2px solid #00bfff;
+/* Links */
+a {
+    color:#1a73e8;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration:underline;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 30px;
-    margin-top: 50px;
-    font-size: 0.9em;
+    text-align:center;
+    padding:30px 20px;
+    font-size:0.9em;
+    color:#555;
 }
 
-footer a {
-    color: #00bfff;
+/* Anime girl section */
+.what-is-fixnow, .run-download {
+    display:flex;
+    align-items:center;
+    gap:20px;
 }
+.what-is-fixnow .text, .run-download .text {
+    flex:1;
+}
+.what-is-fixnow .anime-girl img, .run-download .anime-girl img {
+    width:140px;
+    height:auto;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity:0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+.fade-in.visible {
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background:#121212;
+    color:#ddd;
+}
+body.dark-mode header h1 { color:#ffb6c1; }
+body.dark-mode header p,
+body.dark-mode footer,
+body.dark-mode .card p,
+body.dark-mode .card li,
+body.dark-mode .card ol { color:#ccc; }
+body.dark-mode .card {
+    background:#1e1e1e;
+    border:1px solid #333;
+    border-left:5px solid #ffb6c1;
+}
+body.dark-mode .btn {
+    background:#ff90b0;
+}
+body.dark-mode .btn:hover {
+    background:#ffb6c1;
+}
+body.dark-mode a { color:#ffb6c1; }
+body.dark-mode header hr { border-color:#ffb6c1; }
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .what-is-fixnow, .run-download {
+        flex-direction:column;
+        text-align:center;
+    }
+    .what-is-fixnow .anime-girl img, .run-download .anime-girl img {
+        margin-top:10px;
+    }
+    .toggle-btn {
+        top:10px;
+        right:10px;
+        padding:6px 12px;
+    }
+}
+
