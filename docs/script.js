@@ -13,14 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Collapsible sections (if needed)
-    const collapseButtons = document.querySelectorAll(".collapse-btn");
-    collapseButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const content = btn.nextElementSibling;
-            content.style.display = content.style.display === "block" ? "none" : "block";
-        });
-    });
 
     // Dark mode toggle
     const toggleBtn = document.getElementById("darkModeToggle");
