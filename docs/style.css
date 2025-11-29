@@ -1,0 +1,123 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: #111;
+}
+
+/* Animated background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, #0078d7, #00bfff, #1e1e1e);
+    background-size: 400% 400%;
+    animation: moveBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes moveBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 4em;
+    color: #00bfff;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #f0f0f0;
+}
+
+/* Glow effect */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff; }
+    100% { text-shadow: 0 0 20px #00bfff, 0 0 40px #0078d7; }
+}
+
+/* Sections */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #00bfff;
+    margin-bottom: 15px;
+}
+
+p, li {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #00bfff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #00bfff;
+}
+
+.btn:hover {
+    background-color: #0078d7;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00bfff;
+}
+
+/* Screenshot */
+.screenshots img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid #00bfff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #00bfff;
+}
